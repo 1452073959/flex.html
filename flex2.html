@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+
+    /*
+        row（默认值）：主轴为水平方向，起点在左端。
+    row-reverse：主轴为水平方向，起点在右端。
+    column：主轴为垂直方向，起点在上沿。
+    column-reverse：主轴为垂直方向，起点在下沿。。*/
+    /*nowrap（默认）：不换行。wrap：换行，第一行在上方。wrap-reverse：换行，第一行在下方。*/
+    .flexs1 {
+        height: 500px;
+        /*width: 200px;*/
+        margin:0 auto;
+        display: flex;
+        /*flex-direction属性决定主轴的方向（即项目的排列方向）*/
+        flex-direction: row;
+        /*flex-wrap属性定义，如果一条轴线排不下，如何换行。*/
+        flex-wrap: wrap;
+        /*justify-content属性定义了项目在横向的对齐方式。*/
+/*        flex-start（默认值）：左对齐
+        flex-end：右对齐
+        center： 居中
+        space-between：两端对齐，项目之间的间隔都相等。
+        space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。*/
+        justify-content:center;
+        /*align-items属性定义项目在交叉轴上如何对齐。;*/
+/*        flex-start：交叉轴的起点对齐。
+        flex-end：交叉轴的终点对齐。
+        center：交叉轴的中点对齐。
+        baseline: 项目的第一行文字的基线对齐。
+        stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。*/
+        align-items:  flex-start;
+        /*//换行后才有用*/
+        align-content:flex-start;
+        border: 1px dashed blue;
+    }
+
+    .leftc1 {
+        width: 40px;
+        background: aqua;
+        border: 1px dashed red;
+        order: 3;
+        /*flex: 1;*/
+    }
+
+    .leftc2 {
+        width: 60px;
+        background: aqua;
+        border: 1px dashed red;
+
+    }
+    .leftc3 {
+        width: 90px;
+        background: aqua;
+        border: 1px dashed red;
+        order: 2;
+
+    }
+    .leftc4{
+        width: 120px;
+        background: aqua;
+        border: 1px dashed red;
+    }
+    .leftc5 {
+        width: 150px;
+        background: aqua;
+        border: 1px dashed red;
+    }
+</style>
+<div  style="height: 1000px;border: 1px dashed red;width: 100%; ">
+    <div class="flexs1">
+        <div class="leftc1">leftc1</div>
+        <div class="leftc2">leftc2</div>
+        <div class="leftc3">leftc3</div>
+        <div class="leftc4">leftc4</div>
+        <div class="leftc5">leftc5</div>
+    </div>
+</div>
+
+</body>
+</html>

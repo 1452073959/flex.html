@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app" class="demo">
+			{{ message }}
+			<p v-if="seen">现在你看到我了</p>
+		</div>
+		<script>
+			new Vue({
+				el: '#app',
+				data: {
+					message: 'Hello V11ue.js!',
+					seen:'0',
+				}
+			})
+		</script>
+	</body>
+</html>

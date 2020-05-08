@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app3" class="demo">
+			<ul>
+				<li v-for="(todo,index) in todos">
+					{{ todo.text }}__{{index}}
+				</li>
+			</ul>
+		</div>
+		<script>
+			new Vue({
+				el: '#app3',
+				data: {
+					todos: [{
+							text: 'Learn Java11Script'
+						},
+						{
+							text: 'Learn Vue.js'
+						},
+						{
+							text: 'Build Something Awesome'
+						}
+					]
+				}
+			})
+		</script>
+	</body>
+</html>
